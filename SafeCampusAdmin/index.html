@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SafeCampus Admin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h2>SafeCampus Admin Panel</h2>
+  <div>
+  Admin | <button onclick="logout()">Logout</button>
+</div>
+
+</header>
+
+<nav>
+  <button onclick="showSection('dashboard')">Dashboard</button>
+  <button onclick="showSection('locations')">Locations</button>
+  <button onclick="showSection('reports')">Reports</button>
+   <a href="about.html"><button>About</button></a>
+</nav>
+
+<!-- DASHBOARD -->
+<section id="dashboard" class="section active">
+  <h3>Dashboard Overview</h3>
+  <div class="cards">
+    <div class="card"><h4>Total Reports</h4><p id="totalReports">0</p></div>
+    <div class="card"><h4>Accidents</h4><p id="totalAccidents">0</p></div>
+  </div>
+</section>
+
+<!-- LOCATIONS -->
+<section id="locations" class="section">
+  <h3>Locations</h3>
+  <table>
+ <thead>
+<tr>
+  <th>No</th>
+  <th>User</th>
+  <th>Type</th>
+  <th>Status</th>
+  <th>Latitude</th>
+  <th>Longitude</th>
+  <th>Action</th>
+</tr>
+</thead>
+<tbody id="locationsBody"></tbody>
+
+  </table>
+</section>
+
+<!-- REPORTS -->
+<section id="reports" class="section">
+  <h3>User Reports</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>User</th>
+        <th>Date/Time</th>
+        <th>Type</th>
+        <th>Lat, Long</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="reportsBody"></tbody>
+  </table>
+</section>
+
+<!-- MODAL -->
+<div id="detailModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h3>Report Details</h3>
+    <p><b>User:</b> <span id="mUser"></span></p>
+    <p><b>Type:</b> <span id="mType"></span></p>
+    <p><b>Date/Time:</b> <span id="mTime"></span></p>
+    <p><b>Latitude:</b> <span id="mLat"></span></p>
+    <p><b>Longitude:</b> <span id="mLong"></span></p>
+    <p><b>Description:</b></p>
+    <p id="mDesc"></p>
+  </div>
+</div>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
