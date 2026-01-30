@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="4dp" />
+
+    <TextView
+        android:id="@+id/tvLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your current location"
+        android:padding="4dp" />
+
+    <!-- MAP -->
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp" />
+
+    <!-- REPORT INCIDENT -->
+    <Button
+        android:id="@+id/btnReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Report Incident"
+        android:layout_marginBottom="4dp" />
+
+    <!-- VIEW INCIDENTS -->
+    <Button
+        android:id="@+id/btnViewIncidents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Incident List" />
+
+    <!-- REFRESH LOCATION -->
+    <Button
+        android:id="@+id/btnRefreshLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Refresh Location"
+        android:layout_marginBottom="6dp" />
+
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:title="Report Incident"
+        android:titleTextColor="@android:color/white"
+        android:textStyle="bold" />
+
+    <!-- INCIDENT TYPE -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Incident Type"
+        android:textStyle="bold"
+        android:paddingTop="16dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerIncidentType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- DESCRIPTION -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textStyle="bold"
+        android:paddingTop="16dp"/>
+
+    <EditText
+        android:id="@+id/edtDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Describe the incident"
+        android:minLines="3"
+        android:gravity="top"/>
+
+    <!-- LOCATION -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Location"
+        android:textStyle="bold"
+        android:paddingTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tvLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Detecting location..."/>
+
+    <!-- LAT -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Latitude"
+        android:textStyle="bold"
+        android:paddingTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tvLatLng"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- TIME -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time / Date"
+        android:textStyle="bold"
+        android:paddingTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- SEND BUTTON -->
+    <Button
+        android:id="@+id/btnSendReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send Report"
+        android:layout_marginTop="24dp"/>
+
+</LinearLayout>
